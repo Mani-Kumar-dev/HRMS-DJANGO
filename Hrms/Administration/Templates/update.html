@@ -1,0 +1,38 @@
+{% extends "index.html"%}
+{% load static %}
+{% block title %}
+<title>
+  List of Employee
+</title>
+{% endblock title %}
+{% block content%}
+<div class="row text-center mb-5">
+    <div class="col-md-12">
+        <h1 class="head">
+            Add New Employee
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/add_new" method="POST" class="form_add">{% csrf_token %}
+            <label for="img-upload">Upload image</label>
+            <input type="file" id="img-upload" class="form-control" placeholder="Upload image" name="image" required>
+            <input type="text" class="form-control" placeholder="First_Name" name="First_Name" value="{{First_Name}}" required>
+            <input type="text" class="form-control" placeholder="Last_Name" name="Last_Name" value="{{Last_Name}}" required>
+            <input type="text" class="form-control" placeholder="Emp_Id" name="Emp_Id" value="{{Emp_Id}}" required>
+            <input type="text" class="form-control" placeholder="Designation" name="Designation" value="{{Designation}}" required>
+            <input type="text" class="form-control" placeholder="Contact" name="Contact" value="{{Contact}}" required>
+            <input type="Email" class="form-control" placeholder="Email" name="Email" value="{{Email}}" required>
+            <input type="text" class="form-control" placeholder="Location" name="Location" value="{{Location}}" required>
+            <input type="text" class="form-control" placeholder="Salary" name="Salary" value="{{Salary}}" required>
+            <button type="Submit" class="btn btn-primary">Update</button>
+        </form>
+     
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock content%}

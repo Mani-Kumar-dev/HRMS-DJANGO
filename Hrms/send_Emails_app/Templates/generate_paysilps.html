@@ -1,0 +1,40 @@
+<!-- {% extends 'index.html'%}
+{% load static%}
+{% block title %}
+<title>
+   Generate Payslips
+</title>
+{% endblock title %}
+{% block content%}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Add_Payslips</h1>
+    </div>
+</div>
+
+<div class="row">
+    <form action="/gen_payslips" method="post">{% csrf_token%}
+    <div class="col-md-6">
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+        <input type="text" class="form-control mb-3" placeholder="First_Name" id="First_Name" name="First_Name" required>
+        <input type="text" class="form-control mb-3" placeholder="Last_Name" id="Last_Name" name="Last_Name" required>
+        <input type="num" class="form-control mb-3" placeholder=" Emp_Id" id=" Emp_Id" name="Emp_Id" required>
+        <input type="text" class="form-control mb-3" placeholder="Designation" id="Designation" name="Designation" required>
+        
+        <button class="btn btn-primary mt-2 mb-5">Add Payslips</button>
+    </div>
+    </form>
+   
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <a href="/" class="btn btn-primary">Back</a>
+        </div>
+</div>
+</div>
+
+{% endblock content%} -->

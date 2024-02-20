@@ -1,0 +1,164 @@
+<!-- {% extends 'index.html'%}
+{% load static%}
+{% block title %}
+<title>
+   Generate Payslips
+</title>
+{% endblock title %}
+{% block content%}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="head text-center">
+            Employee Payslip
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="paysilps">
+            <div class="com-logo pay">
+              <img src="{% static 'assets/images/Aptlogo.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="table_ps d-flex" >
+              <div class="ps_table">
+                {% for emp in emps %}
+                <p class="infoo">
+                  Name :{{emp.First_Name}} {{emp.Last_Name}}
+                </p>
+                <p class="infoo">
+                  Department : {{emp.Designation}}
+                </p>
+                {% endfor %}
+                <p class="infoo">
+                  Days : Worked
+                </p>
+                <p class="infoo">
+                  Overtime : 12
+                </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                          <th scope="col">Earnings</th>
+                          <th scope="col">YTD</th>
+                          <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Basic Pay</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Medical Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Houseing  Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Conveyance Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Food Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Overtime Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th scope="col">Total Earning</th>
+                          <th scope="col">********</th>
+                          <th scope="col">*****</th>
+                        </tr>
+                      </thead>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="ps_table">
+                {% for emp in emps %}
+              <p class="infoo">
+                Employee_Id : {{emp.Emp_Id}}
+              </p>
+              <p class="infoo">
+               Designation : {{emp.Designation}}
+              </p>
+              {% endfor %}
+              <p class="infoo">
+                Bank Account : 123456789
+              </p>
+              <p class="infoo">
+               LOP: 2
+              </p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">Deductions</th>
+                        <th scope="col">YTD</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>National Insurance</td>
+                        <td>425.00</td>
+                        <td>58.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Loss of Pay</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Loan Repayment</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Advance Repayment</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Food Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Overtime Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th scope="col">Total Deductions</th>
+                          <th scope="col">********</th>
+                          <th scope="col">*****</th>
+                        </tr>
+                      </thead>
+                      
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content%} -->

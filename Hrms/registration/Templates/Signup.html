@@ -1,0 +1,42 @@
+{% extends "index.html"%}
+{% load static %}
+{% block title %}
+<title>
+Sign_Up
+</title>
+{% endblock title %}
+
+{% block content%}
+<section class="bg_emp">
+<div class="row">
+    <div class="col-md-12">
+        <div class="head">
+            <h1 class="head_cont text-center text-white">
+                Sign_Up
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card sig">
+           <form action="/Signup" method="Post">{% csrf_token%}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+            <input type="text" class="form-control" placeholder="UserName" name="username" required>
+            <input type="Password" class="form-control" placeholder="Password" name="password" required>
+            <input type="Password" class="form-control" placeholder="Conform_Password" name="c_Password" required>
+            <button type="submit" class="btn-primary form-control mb-3">Sign_In</button>
+            <span class="log">Already Sign_In ? <a href="/login">Login</a></span>
+           </form>
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock content%}
+

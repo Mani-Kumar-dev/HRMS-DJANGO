@@ -1,0 +1,269 @@
+{% extends "index.html"%}
+{% load static %}
+{% block title %}
+<title>
+   Employee
+</title>
+{% endblock title %}
+{% block content%}
+<div class="row mb-5">
+    <div class="col-md-12">
+        <h1 class="head text-center">
+            Employee Details
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="details">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">First_Name</th>
+                    <th scope="col">Last_Name</th>
+                    <th scope="col">Emp_Id</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {% for emp in emps %}
+                    <td>{{emp.First_Name}}</td>
+                    <td>{{emp.Last_Name}}</td>
+                    <td>{{emp.Emp_Id}}</td>
+                    <td>{{emp.Designation}}</td>
+                    <td>{{emp.Contact}}</td>
+                    <td>{{emp.Email}}</td>
+                    <td>{{emp.Location}}</td>
+                    {% endfor %}
+                  </tr>
+                 
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="com-logo">
+                <img src="{% static 'assets/images/Aptlogo.png' %}" class="img-fluid" alt="">
+            </div>
+            {% for emp in emps %}
+            <div class="img-card">
+                <img src="{{emp.image.url}}" class="card-img id_img" alt="NO Image">
+            </div>
+    
+            <div class="card-content">
+                <ul class="list-group det">
+                   
+                    <li class="list-link">Name : {{emp.First_Name}} {{emp.Last_Name}}</li>
+                    <li class="list-link">Emp_Id : {{emp.Emp_Id}}</li>
+                    <li class="list-link">Designation :{{emp.Designation}}</li>
+                    <li class="list-link">Contact : {{emp.Contact}}</li>
+              {% endfor%}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-6">
+        <div class="card list_pay">
+                <ul class="list-group ps">
+                    {% for emp in emps %}
+                    <li class="list-items ps-link">
+                        Name : {{emp.First_Name}} {{emp.Last_Name}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Employee Id : {{emp.Emp_Id}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Designation :{{emp.Designation}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Location : {{emp.Location}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Contact : {{emp.Contact}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Email : {{emp.Email}}
+                    </li>
+                    <li class="list-items ps-link">
+                        Salary : {{emp.Salary}}
+                    </li>
+                    {% endfor%}
+                </ul>
+            </div>
+ 
+        <div class="payslip_btn text-center">
+            <a href="/payslips" class="btn btn-primary ps">Payslip</a>
+        </div>   
+    </div>
+    <!-- <div class="col-md-6">
+        <div class="paysilps">
+            <div class="com-logo pay">
+                <img src="{% static 'assets/images/Aptlogo.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="emp_details d-flex">
+                <div class="list_pay">
+                    <ul class="list-group ps">
+                        {% for emp in emps %}
+                        <li class="list-items ps-link">
+                            Employee Id : {{emp.Emp_Id}}
+                        </li>
+                        <li class="list-items ps-link">
+                            Designation :{{emp.Designation}}
+                        </li>
+                        
+                        <li class="list-items ps-link">
+                            Contact : {{emp.Contact}}
+                         </li>
+                           
+                        <li class="list-items ps-link">
+                           Loss Of Pay : 12
+                         </li>
+                         {% endfor%}
+                    </ul>
+                </div>
+                <div class="list_pay">
+                    <ul class="list-group ps">
+                        {% for emp in emps %}
+                        <li class="list-items ps-link">
+                            Name : {{emp.First_Name}} {{emp.Last_Name}}
+                        </li>
+                        <li class="list-items ps-link">
+                           Bank : IDFC
+                        </li>
+                        
+                        <li class="list-items ps-link">
+                           Bank A/c : 1234656789
+                         </li>
+                           
+                        <li class="list-items ps-link">
+                          Location : {{emp.Location}}
+                         </li>
+                         {% endfor%}
+                    </ul>
+                </div>
+            </div>
+          <div class="table_ps d-flex" >
+            <div class="ps_table">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">Earnings</th>
+                        <th scope="col">YTD</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Basic Pay</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Medical Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Houseing  Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Conveyance Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Food Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Overtime Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th scope="col">Total Earning</th>
+                          <th scope="col">********</th>
+                          <th scope="col">*****</th>
+                        </tr>
+                      </thead>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ps_table">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">Deductions</th>
+                        <th scope="col">YTD</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>National Insurance</td>
+                        <td>425.00</td>
+                        <td>58.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Loss of Pay</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Loan Repayment</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Advance Repayment</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Food Allowance</td>
+                        <td>6840.00</td>
+                        <td>1368.00</td>
+                      </tr>
+                      <tr>
+                       
+                        <td>Overtime Allowance</td>
+                        <td>1368.00</td>
+                        <td>250.00</td>
+                      </tr>
+                      <thead>
+                        <tr>
+                          <th scope="col">Total Deductions</th>
+                          <th scope="col">********</th>
+                          <th scope="col">*****</th>
+                        </tr>
+                      </thead>
+                      
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+        </div>
+    </div> -->
+</div>
+{% endblock content%}

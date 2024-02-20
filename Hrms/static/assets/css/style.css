@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    display: inline-flex;
+    width: 100%;
+   
+}
+a.dashboard {
+    color: #ffff;
+}
+.row.side_Nav {
+    width: 20%;
+    min-height: 100vh;
+    background:#000000ab;
+    padding: 25px;
+
+}
+nav.navbar {
+    background: #000000ab;
+}
+a.nav-link {
+    color: #fff !IMPORTANT;
+}
+.row.nav_bar {
+    width: 100%;
+    margin: 0;
+}
+ul.list-group {
+    margin: 45px 0 0px 20px;
+    list-style: none;
+    font-size: 20px;
+}
+a{
+    text-decoration: none !important;
+    
+}
+li.list-items {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.dash_list{
+    color: #fff !important;
+}
+.img-card {
+    width: 65%;
+    margin: 0% 17%;
+}
+.card {
+    width: 56%;
+    margin: 10% 10%;
+}
+img.card-img.id_img {
+    border-radius: 50%;
+    padding: 5px;
+}
+input.form-control {
+    padding: 15px;
+    margin-bottom: 10px;
+}
+form.form_add {
+    padding: 15px;
+}
+li.list-items.ps-link {
+    color: #000000b3;
+}
+.table_ps.d-flex {
+    gap: 15px;
+}
+.emp_details.d-flex {
+    gap: 50px;
+}
+.paysilps {
+    border: 1px solid #00000029;
+    padding: 15px;
+    background: #f0f0ffd4;
+}
+.com-logo.pay {
+    width: 50%;
+    margin-left: 25%;
+}
+li.list-items.crumbs {
+    color: #000;
+}
+.card.list_pay {
+    width: 50%;
+}
+a.btn.btn-primary.ps {
+    width: 15%;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.card.sig {
+    padding: 75px !important;
+    margin-left: 20%;
+    background: transparent;
+    border: none;
+}
+.bg_emp{
+    background:linear-gradient(90deg, rgba(22,28,29,0.8212535014005602) 100%, rgba(2,0,36,0.7316176470588236) 100%),url('../Images/bg-emp.jpg'),no-repeat;
+    height: 93vh;
+   
+    background-size: cover;
+    background-position: center;
+}
+span.log {
+    color: #faebd7;
+}

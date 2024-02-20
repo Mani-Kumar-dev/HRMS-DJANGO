@@ -1,0 +1,45 @@
+{% extends "index.html"%}
+{% load static %}
+{% block title %}
+<title>
+  List of Employee
+</title>
+{% endblock title %}
+{% block content%}
+<div class="row text-center mb-5">
+    <div class="col-md-12">
+        <h1 class="head">
+            Add New Employee
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- <h1>Confirm Deletion</h1>
+            <p>Are you sure you want to delete {{ emps.First_Name }} {{ emps.Last_Name }}?</p>
+        <form action="{% url 'confirm_delete' %}" method="POST" class="form_add">
+            {% csrf_token %}
+            <input type="submit" value="Confirm Delete" class="btn btn-danger">
+        </form>
+         -->
+         <form id="deleteForm" action="{% url 'confirm_delete' emps.First_Name %}" method="POST" class="form_add">
+            {% csrf_token %}
+            <input type="submit" value="Confirm Delete" class="btn btn-danger" onclick="return confirmDelete();">
+        </form>
+        
+        <script>
+        function confirmDelete() {
+            if (confirm('Are you sure you want to delete this employee?')) {
+                return true;  // Proceed with the form submission
+            } else {
+                return false; // Cancel the form submission
+            }
+        }
+        </script>
+
+    </div>
+</div>
+
+
+
+{% endblock content%}
